@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="قدم سؤالك"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Title" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="الاسم"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NameLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/personName" />
+
+    <TextView
+        android:text="البريد الالكتروني"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EmailLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/personِEmail" />
+
+    <TextView
+        android:text="الجنس"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderLabel" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Gender">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أنثى"
+            android:id="@+id/Female"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="ذكر"
+            android:id="@+id/Male"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:text="العمر"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Age" />
+
+    <TextView
+        android:text="حقوق النشر"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PrivacyLabel" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Privacy">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="يسمح بالنشر"
+            android:id="@+id/Permitted"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="لا يسمح بالنشر"
+            android:id="@+id/NotPermitted"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:text="نص الرسالة"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bodyLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/body"
+        android:layout_weight="0.52" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="ارسال"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/send" />
+</LinearLayout>

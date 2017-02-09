@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Shoura</string>
+    <string name="app_name">شورى</string>
+    <string name="FieldRequired">الحقل مطلوب</string>
+    <string name="ConsultationSaved">تم ارسال استشارتك بنجاح</string>
+    <string name="ErrorOccured">حصل خطأ، الرجاء المحاولة مرة أخرى</string>
+    <string name="InvalidEmail">البريد الالكتروني خطأ</string>
+    <string name="EmailPattern">([\w.-]+@([\w-]+)\.+\w{2,})</string>
 </resources>
