@@ -63,11 +63,11 @@ public class RequestConsultation extends Activity {
 
                     if(consultationNumber!=0){
                         // Email Applicant
-                        //String.format(getString(R.string.Email_ConsultationRecieved), Name, String.valueOf(consultationNumber));
+                        String applicantEmailBody = String.format(getString(R.string.Email_ConsultationRecieved), Name, String.valueOf(consultationNumber));
 
                         //Email Consultant
                         String ConsultantName = GetConsultantName(ConsultantId);
-                        //String.format(getString(R.string.Email_NewConsultation), ConsultantName, String.valueOf(consultationNumber));
+                        String consultantEmailBody = String.format(getString(R.string.Email_NewConsultation), ConsultantName, String.valueOf(consultationNumber));
 
                         // Confirm Save By Toast
                         Toast.makeText(RequestConsultation.this,getString(R.string.ConsultationSaved),Toast.LENGTH_LONG).show();

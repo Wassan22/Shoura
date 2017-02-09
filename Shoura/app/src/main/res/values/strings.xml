@@ -17,4 +17,6 @@
     <string name="PrivacyNotPermitted">لا يسمح بالنشر</string>
     <string name="Body">نص الرسالة</string>
     <string name="Send">ارسال</string>
+    <string name="Email_ConsultationRecieved">عزيزي %1$s،\n\n لقد تم استلام استشارتك رقم %2$s بنجاح. \n\n تحياتنا لك، \n جمعية وميض</string>
+    <string name="Email_NewConsultation">عزيزي %1$s،\n\n هناك استشارة رقم %2$s بانتظارك. نرجوا الدخول على الموقع الالكتروني أو التطبيق للرد عليها. جعلها الله في موازين اعمالك.\n\n تحياتنا لك، \n جمعية وميض</string>
 </resources>
