@@ -5,4 +5,16 @@
     <string name="ErrorOccured">حصل خطأ، الرجاء المحاولة مرة أخرى</string>
     <string name="InvalidEmail">البريد الالكتروني خطأ</string>
     <string name="EmailPattern">([\w.-]+@([\w-]+)\.+\w{2,})</string>
+    <string name="title_requestConsultation">قدم سؤالك</string>
+    <string name="Name">الاسم</string>
+    <string name="Email">البريد الالكتروني</string>
+    <string name="Gender">الجنس</string>
+    <string name="Female">أنثى</string>
+    <string name="Male">ذكر</string>
+    <string name="Age">العمر</string>
+    <string name="Privacy">حقوق النشر</string>
+    <string name="PrivacyPermitted">يسمح بالنشر</string>
+    <string name="PrivacyNotPermitted">لا يسمح بالنشر</string>
+    <string name="Body">نص الرسالة</string>
+    <string name="Send">ارسال</string>
 </resources>

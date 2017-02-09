@@ -106,7 +106,7 @@ public class RequestConsultation extends Activity {
             emailEditText.requestFocus();
             emailEditText.setError(getString(R.string.FieldRequired));
         }
-        else if (!user_email.matches(getString(R.string.EmailPattern))) // Invalid Email Pattern
+        else if (!user_email.matches("([\\w.-]+@([\\w-]+)\\.+\\w{2,})")) // Invalid Email Pattern
         {
             valid = false;
             emailEditText.requestFocus();

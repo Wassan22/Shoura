@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="قدم سؤالك"
+        android:text="@string/title_requestConsultation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Title" />
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="الاسم"
+        android:text="@string/Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/NameLabel" />
@@ -26,7 +26,7 @@
         android:id="@+id/personName" />
 
     <TextView
-        android:text="البريد الالكتروني"
+        android:text="@string/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/EmailLabel" />
@@ -39,7 +39,7 @@
         android:id="@+id/personِEmail" />
 
     <TextView
-        android:text="الجنس"
+        android:text="@string/Gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/genderLabel" />
@@ -52,20 +52,20 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="أنثى"
+            android:text="@string/Female"
             android:id="@+id/Female"
             android:checked="true" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:text="ذكر"
+            android:text="@string/Male"
             android:id="@+id/Male"
             android:checked="false" />
     </RadioGroup>
 
     <TextView
-        android:text="العمر"
+        android:text="@string/Age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ageLabel" />
@@ -78,7 +78,7 @@
         android:id="@+id/Age" />
 
     <TextView
-        android:text="حقوق النشر"
+        android:text="@string/Privacy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/PrivacyLabel" />
@@ -91,27 +91,27 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="يسمح بالنشر"
+            android:text="@string/PrivacyPermitted"
             android:id="@+id/Permitted"
             android:checked="true" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:text="لا يسمح بالنشر"
+            android:text="@string/PrivacyNotPermitted"
             android:id="@+id/NotPermitted"
             android:checked="false" />
     </RadioGroup>
 
     <TextView
-        android:text="نص الرسالة"
+        android:text="@string/Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bodyLabel" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/body"
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="ارسال"
+        android:text="@string/Send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/send" />
