@@ -23,16 +23,16 @@ public class MyDB  extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Consultant (username text primary key,email text,password text, name text primary key,field text,bio text, photo BLOB);");
+        db.execSQL("create table Consultant (username text primary key,email text,password text, name text ,field text,bio text, photo BLOB);");
         ContentValues cv = new  ContentValues();
-        cv.put("username", "غادة");
+        cv.put("username", "Ghada");
         cv.put("email", "shoura.wameedh@gmail.com");
         cv.put("password", "ShouraRebat5");
         cv.put("name", "غادة");
         cv.put("field", "نفسي");
         cv.put("bio", "bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio");
         cv.put("photo", getBytes(icon));
-        db.insert( "Expert", null, cv );
+        db.insert( "Consultant", null, cv );
     }
 
     @Override
@@ -57,10 +57,12 @@ public class MyDB  extends SQLiteOpenHelper {
         Entities.Consultant consultant = new Entities().new Consultant();
 
         if (res.moveToFirst()) {
-            consultant.Name = res.getString(0);
-            consultant.Field = res.getString(1);
-            consultant.Bio = res.getString(2);
-            consultant.Photo = res.getBlob(3);
+            consultant.Username = res.getString(0);
+            consultant.Email = res.getString(1);
+            consultant.Name = res.getString(3);
+            consultant.Field = res.getString(4);
+            consultant.Bio = res.getString(5);
+            consultant.Photo = res.getBlob(6);
         }
         return consultant;
     }

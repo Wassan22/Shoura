@@ -30,7 +30,7 @@ public class ConsultantProfile extends AppCompatActivity {
 
         // to receive the number from previous page
         //Intent intent = getIntent();
-        username = "ghada"; // username = intent.getStringExtra("username");
+        username = "Ghada"; // username = intent.getStringExtra("username");
 
         // Get Layout Elements
         name = (TextView) findViewById(R.id.name);
