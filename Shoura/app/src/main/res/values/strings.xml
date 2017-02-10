@@ -19,4 +19,18 @@
     <string name="Send">ارسال</string>
     <string name="Email_ConsultationRecieved">عزيزي %1$s،\n\n لقد تم استلام استشارتك رقم %2$s بنجاح. \n\n تحياتنا لك، \n جمعية وميض</string>
     <string name="Email_NewConsultation">عزيزي %1$s،\n\n هناك استشارة رقم %2$s بانتظارك. نرجوا الدخول على الموقع الالكتروني أو التطبيق للرد عليها. جعلها الله في موازين اعمالك.\n\n تحياتنا لك، \n جمعية وميض</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="forgotPassword">نسيت كلمة المرور</string>
+    <string name="consultantName">اسم المستشار</string>
+    <string name="Field">المجال</string>
+    <string name="Bio">نبذة</string>
+    <string name="PreviousConsultation">الاستشارات المقدمة</string>
+    <string name="Chat">المحادثة الفورية</string>
+    <string name="EmailSend">" تم إرسال الايميل"</string>
+    <string name="SendingEmail">"يتم إرسال الإيميل "</string>
+    <string name="PleaseWait">من فضلك انتظر ...</string>
+    <string name="Email_NewPassword">عزيزي %1$s،\n\n لقد تم اعادة تعيين كلمة المرور في شورى الى "%2$s" بنجاح. \n\n تحياتنا لك، \n جمعية وميض</string>
+    <string name="Subject_PasswordReset">تطبيق شورى | اعادة تعيين كلمة المرور</string>
+    <string name="viewConsultant">عرض المستشار</string>
+    <string name="Subject_ConsultationRecieved">تطبيق شورى | تم استلام استشارتك</string>
 </resources>

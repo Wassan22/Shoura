@@ -19,7 +19,7 @@ public class RequestConsultation extends Activity {
     Button send;
     RadioGroup genderRadioGroup, privacyRadioGroup;
     RadioButton selectedGender, selectedPrivacy;
-    float ConsultantId;
+    String Consultantusername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class RequestConsultation extends Activity {
         setContentView(R.layout.request_consultation);
 
         // Get Consultant Id
-        ConsultantId = 0;
+        Consultantusername = "";
 
         // Get Layout Elements
         send=(Button)findViewById(R.id.send);
@@ -64,10 +64,12 @@ public class RequestConsultation extends Activity {
                     if(consultationNumber!=0){
                         // Email Applicant
                         String applicantEmailBody = String.format(getString(R.string.Email_ConsultationRecieved), Name, String.valueOf(consultationNumber));
+                        //new SendMail(RequestConsultation.this,Email ,getString(R.string.Subject_ConsultationRecieved),applicantEmailBody).Send();
 
                         //Email Consultant
-                        String ConsultantName = GetConsultantName(ConsultantId);
-                        String consultantEmailBody = String.format(getString(R.string.Email_NewConsultation), ConsultantName, String.valueOf(consultationNumber));
+                        //Entities.Consultant consultant = GetConsultant(Consultantusername);
+                        //String consultantEmailBody = String.format(getString(R.string.Email_NewConsultation), consultant.Name, String.valueOf(consultationNumber));
+                        //new SendMail(RequestConsultation.this,consultant.Email ,getString(R.string.Subject_ConsultationRecieved),applicantEmailBody).Send();
 
                         // Confirm Save By Toast
                         Toast.makeText(RequestConsultation.this,getString(R.string.ConsultationSaved),Toast.LENGTH_LONG).show();
@@ -77,11 +79,12 @@ public class RequestConsultation extends Activity {
                 }
             }
 
-            private String GetConsultantName(float consultantId) {
+            /*private Entities.Consultant GetConsultant(String username) {
                 // Get Consultant By Id
                 // Get Name
-                return "";
-            }
+                Entities.Consultant consultant = new Entities().new Consultant();
+                return consultant;
+            }*/
 
             private float SaveConsulation(String name, String email, String body, String age, int gender, int privacy) {
                 // Save Consultation to Web Service or Database, return consultation number
