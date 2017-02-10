@@ -33,4 +33,7 @@
     <string name="Subject_PasswordReset">تطبيق شورى | اعادة تعيين كلمة المرور</string>
     <string name="viewConsultant">عرض المستشار</string>
     <string name="Subject_ConsultationRecieved">تطبيق شورى | تم استلام استشارتك</string>
+    <string name="ConsultationAnswer">رد المستشار</string>
+    <string name="Consultation">الاستشارة</string>
+    <string name="ViewConsultation">عرض استشارة</string>
 </resources>
