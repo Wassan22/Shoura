@@ -68,12 +68,16 @@ public class RequestConsultation extends Activity {
                         if (consultationNumber != 0) {
                             // Email Applicant
                             String applicantEmailBody = String.format(getString(R.string.Email_ConsultationRecieved), Name, String.valueOf(consultationNumber));
-                            //new SendMail(RequestConsultation.this,Email ,getString(R.string.Subject_ConsultationRecieved),applicantEmailBody).Send();
+                            new SendMail(RequestConsultation.this,Email ,getString(R.string.Subject_ConsultationRecieved),applicantEmailBody).Send();
 
                             //Email Consultant
                             //Entities.Consultant consultant = GetConsultant(Consultantusername);
-                            //String consultantEmailBody = String.format(getString(R.string.Email_NewConsultation), consultant.Name, String.valueOf(consultationNumber));
-                            //new SendMail(RequestConsultation.this,consultant.Email ,getString(R.string.Subject_ConsultationRecieved),applicantEmailBody).Send();
+                            String consultantName = "";
+                            String consultantEmail = "";
+
+                            // Email Consultant
+                            String consultantEmailBody = String.format(getString(R.string.Email_NewConsultation), consultantName, String.valueOf(consultationNumber));
+                            new SendMail(RequestConsultation.this,consultantEmail,getString(R.string.Subject_ConsultationRecieved),consultantEmailBody).Send();
 
                             // Confirm Save By Toast
                             Toast.makeText(RequestConsultation.this, getString(R.string.ConsultationSaved), Toast.LENGTH_LONG).show();
