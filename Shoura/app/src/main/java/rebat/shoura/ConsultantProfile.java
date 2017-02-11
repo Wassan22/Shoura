@@ -29,65 +29,67 @@ public class ConsultantProfile extends AppCompatActivity {
         setTitle(R.string.viewConsultant);
 
         // to receive the number from previous page
-        //Intent intent = getIntent();
-        username = "Ghada"; // username = intent.getStringExtra("username");
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
 
-        // Get Layout Elements
-        name = (TextView) findViewById(R.id.name);
-        field = (TextView) findViewById(R.id.field);
-        bio = (TextView) findViewById(R.id.bio);
-        img = (ImageView) findViewById(R.id.img);
+        if(username != null) {
+            // Get Layout Elements
+            name = (TextView) findViewById(R.id.name);
+            field = (TextView) findViewById(R.id.field);
+            bio = (TextView) findViewById(R.id.bio);
+            img = (ImageView) findViewById(R.id.img);
 
-        // Get & Set consultant profile
-        Entities.Consultant consultant = GetConsultant(username);
+            // Get & Set consultant profile
+            Entities.Consultant consultant = GetConsultant(username);
 
-        // Set Values from GetConsultant
-        name.setText(consultant.Name);
-        field.setText(consultant.Field);
-        bio.setText(consultant.Bio);
+            // Set Values from GetConsultant
+            name.setText(consultant.Name);
+            field.setText(consultant.Field);
+            bio.setText(consultant.Bio);
 
-        if (consultant.Photo != null){ // If img is available
-            img.setImageBitmap(getPhoto(consultant.Photo));
-        }else { // Default Img
-            img.setImageDrawable(getResources().getDrawable(R.drawable.ad));
+            if (consultant.Photo != null) { // If img is available
+                img.setImageBitmap(getPhoto(consultant.Photo));
+            } else { // Default Img
+                img.setImageDrawable(getResources().getDrawable(R.drawable.ad));
+            }
+            // When user click on Sending Consultation Button
+            RequestConsultation = (Button) findViewById(R.id.RequestConsultationButton);
+            RequestConsultation.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Transfer to the next interface
+                    Intent i = new Intent(ConsultantProfile.this, RequestConsultation.class);
+                    i.putExtra("username", username);
+                    startActivity(i);
+                }
+            });
+
+            // When user click on Chat with Consultant Button
+            Chat = (Button) findViewById(R.id.ChatButton);
+            Chat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Transfer to the next interface
+                        /*
+                        Intent i = new Intent(AdviserProfile.this,MainActivity.class);
+                        i.putExtra("username","");
+                        startActivity(i);*/
+                }
+            });
+
+            // When user click on preview previous consultations Button
+            Consultations = (Button) findViewById(R.id.ConsultationsButton);
+            Consultations.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        /*
+                        //change the next page
+                        Intent i = new Intent(AdviserProfile.this,MainActivity.class);
+                        i.putExtra("username","");
+                        startActivity(i); */
+                }
+            });
         }
-        // When user click on Sending Consultation Button
-        RequestConsultation = (Button) findViewById(R.id.RequestConsultationButton);
-        RequestConsultation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Transfer to the next interface
-                Intent i = new Intent(ConsultantProfile.this, RequestConsultation.class);
-                i.putExtra("username", username);
-                startActivity(i);
-            }
-        });
-
-        // When user click on Chat with Consultant Button
-        Chat = (Button) findViewById(R.id.ChatButton);
-        Chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Transfer to the next interface
-                /*
-                Intent i = new Intent(AdviserProfile.this,MainActivity.class);
-                i.putExtra("username","");
-                startActivity(i);*/
-            }
-        });
-
-        // When user click on preview previous consultations Button
-        Consultations =(Button) findViewById(R.id.ConsultationsButton);
-        Consultations.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*
-                //change the next page
-                Intent i = new Intent(AdviserProfile.this,MainActivity.class);
-                i.putExtra("username","");
-                startActivity(i); */
-            }
-        });
     }
 
     private Entities.Consultant GetConsultant(String username) {

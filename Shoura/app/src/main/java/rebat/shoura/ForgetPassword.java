@@ -49,9 +49,8 @@ public class ForgetPassword extends Activity {
                     new SendMail(ForgetPassword.this, email,subject,message).Send();
 
                     // Transfer to Login Interface
-                     /*Intent i = new Intent(AdviserProfile.this,MainActivity.class); back to login page
-                      i.putExtra("username","");
-                      startActivity(i);*/
+                    //Intent i = new Intent(AdviserProfile.this,MainActivity.class); //back to login page
+                    //startActivity(i);
                 }
             }
 
