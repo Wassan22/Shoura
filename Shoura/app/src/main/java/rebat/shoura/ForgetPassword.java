@@ -1,7 +1,7 @@
 package rebat.shoura;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class ForgetPassword extends AppCompatActivity {
+public class ForgetPassword extends Activity {
 
     String email;
     @Override
@@ -18,7 +18,7 @@ public class ForgetPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgot_password);
 
-        //setTitle(R.string.forgotPassword);
+        setTitle(R.string.forgotPassword);
 
         // get layout elements
         final Button button = (Button) findViewById(R.id.send);

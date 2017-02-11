@@ -1,8 +1,9 @@
 package rebat.shoura;
 
-
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import java.util.Properties;
@@ -98,6 +99,37 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
     }
 
     public void Send() {
-        this.execute(); //Executing sendmail to send email
+
+        if (InternetConnection.checkConnection(context)) {
+            // Its Available...
+            this.execute();
+        } else {
+            // Not Available...
+            Toast.makeText(context, " لا يوجد اتصال بالانترنت ", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public static class InternetConnection {
+        /**
+         * CHECK WHETHER INTERNET CONNECTION IS AVAILABLE OR NOT
+         */
+        public static boolean checkConnection(Context context) {
+            final ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
+
+            if (activeNetworkInfo != null) { // connected to the internet
+                Toast.makeText(context, activeNetworkInfo.getTypeName(), Toast.LENGTH_SHORT).show();
+
+                if (activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+                    // connected to wifi
+                    return true;
+                } else if (activeNetworkInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+                    // connected to the mobile provider's data plan
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

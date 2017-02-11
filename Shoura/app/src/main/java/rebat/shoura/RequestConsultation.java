@@ -28,6 +28,7 @@ public class RequestConsultation extends Activity {
 
         // Set Leyout
         setContentView(R.layout.request_consultation);
+        setTitle(R.string.title_requestConsultation);
 
         // Get Consultant Id
         Intent previous = getIntent();

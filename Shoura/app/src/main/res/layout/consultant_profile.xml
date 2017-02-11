@@ -3,17 +3,136 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/viewConsultant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Title" />
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
-<!--    <GridLayout
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height = "0dp"
+                android:layout_weight = "0.8"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height = "0dp"
+                android:layout_weight = "0.5"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center_horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/name"
+                    android:text="@string/consultantName"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="16dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dip"
+                    android:id="@+id/img"
+                    android:text="\nProfile"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAlignment="center"
+                    android:adjustViewBounds="false" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height = "0dp"
+                android:layout_weight = "1"
+                android:textAlignment="center"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/field"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:text="@string/Field"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal|bold" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height = "0dp"
+                android:layout_weight = "1"
+                android:textAlignment="center"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bio"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="@string/Bio"
+                    android:textSize="18sp"
+                    android:paddingRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textStyle="normal|bold"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height = "0dp"
+                android:layout_weight = "1.5"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center_horizontal">
+
+                <Button
+                    android:text="@string/PreviousConsultation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ConsultationsButton" />
+
+                <Button
+                    android:text="@string/Chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ChatButton" />
+
+                <Button
+                    android:text="@string/title_requestConsultation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RequestConsultationButton"/>
+                    <!--android:textAlignment="center"-->
+            </TableRow>
+        </TableLayout>
+</LinearLayout>
+
+    <!--    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
@@ -99,129 +218,3 @@
 
     </GridLayout>-->
 
-
-        <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height = "0dp"
-                    android:layout_weight = "0.8"/>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height = "0dp"
-                    android:layout_weight = "0.5"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical|center_horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:id="@+id/name"
-                        android:text="@string/consultantName"
-                        android:textSize="18sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="16dp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="60dip"
-                        android:id="@+id/img"
-                        android:text="\nProfile"
-                        android:layout_weight="1"
-                        android:textSize="30sp"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:textAlignment="center"
-                        android:adjustViewBounds="false" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height = "0dp"
-                    android:layout_weight = "1"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:id="@+id/field"
-                        android:textSize="18sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="16dp" />
-
-                    <TextView
-                        android:text="@string/Field"
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:textSize="18sp"
-                        android:gravity="center_vertical"
-                        android:paddingRight="16dp"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif"
-                        android:textStyle="normal|bold" />
-
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height = "0dp"
-                    android:layout_weight = "1"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:id="@+id/bio"
-                        android:textSize="18sp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="16dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:text="@string/Bio"
-                        android:textSize="18sp"
-                        android:paddingRight="16dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:textStyle="normal|bold"/>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height = "0dp"
-                    android:layout_weight = "1.5"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical|center_horizontal">
-
-                    <Button
-                        android:text="@string/PreviousConsultation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ConsultationsButton" />
-
-                    <Button
-                        android:text="@string/Chat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ChatButton" />
-
-                    <Button
-                        android:text="@string/title_requestConsultation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RequestConsultationButton"/>
-                        android:textAlignment="center"
-                </TableRow>
-            </TableLayout>
-
-</LinearLayout>

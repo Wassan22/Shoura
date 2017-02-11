@@ -21,6 +21,7 @@ public class ViewConsultation extends Activity {
 
         // Set Leyout
         setContentView(R.layout.consultation);
+        setTitle(R.string.ViewConsultation);
 
         // Get Consultation Id
         Intent previous = getIntent();
