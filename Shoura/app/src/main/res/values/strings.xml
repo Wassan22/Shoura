@@ -36,4 +36,5 @@
     <string name="ConsultationAnswer">رد المستشار</string>
     <string name="Consultation">الاستشارة</string>
     <string name="ViewConsultation">عرض استشارة</string>
+    <string name="ViewConsultations">عرض الاستشارات</string>
 </resources>
