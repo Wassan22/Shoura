@@ -1,6 +1,12 @@
 package rebat.shoura;
 
+/**
+ * Created by Atheer on 2/10/17.
+ */
+
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +24,7 @@ public class ForgetPassword extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgot_password);
 
-        setTitle(R.string.forgotPassword);
+        //setTitle(R.string.forgotPassword);
 
         // get layout elements
         final Button button = (Button) findViewById(R.id.send);
@@ -42,6 +48,8 @@ public class ForgetPassword extends Activity {
 
                     //Getting content for email
                     String consultantName = "";
+                    String consultantUsername = "";
+
                     String subject = getString(R.string.Subject_PasswordReset);
                     String message = String.format(getString(R.string.Email_NewPassword), consultantName, newPassword);
 
@@ -49,8 +57,8 @@ public class ForgetPassword extends Activity {
                     new SendMail(ForgetPassword.this, email,subject,message).Send();
 
                     // Transfer to Login Interface
-                    //Intent i = new Intent(AdviserProfile.this,MainActivity.class); //back to login page
-                    //startActivity(i);
+                    Intent i = new Intent(ForgetPassword.this,Login.class); //back to login page
+                    startActivity(i);
                 }
             }
 

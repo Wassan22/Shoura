@@ -25,9 +25,9 @@ public class ViewConsultation extends Activity {
 
         // Get Consultation Id
         Intent previous = getIntent();
-        if(previous.getStringExtra("ConsultationId") != null) {
-            ConsultationId = Integer.parseInt(previous.getStringExtra("ConsultationId"));
+        ConsultationId = previous.getIntExtra("ConsultationId",0);
 
+        if( ConsultationId != 0) {
             // Get Layout Elements
             Consultation = (TextView) findViewById(R.id.Consultation);
             Answer = (TextView) findViewById(R.id.Answer);

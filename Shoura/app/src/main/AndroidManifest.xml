@@ -9,12 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".RequestConsultation">
+            android:name=".RequestConsultation"
+            android:label="@string/title_requestConsultation">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewConsultation">
+        <activity android:name=".ViewConsultation"
+            android:label="@string/ViewConsultation">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -25,12 +27,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConsultantProfile">
+        <activity android:name=".ConsultantProfile"
+            android:label="@string/viewConsultant">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ForgetPassword">
+        <activity android:name=".ForgetPassword"
+            android:label="@string/forgotPassword">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

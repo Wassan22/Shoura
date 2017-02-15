@@ -1,7 +1,7 @@
 package rebat.shoura;
 
 /**
- * Created by wassanalluhaidan on 2/14/17.
+ * Created by Salha Altamimi on 2/14/17.
  */
 
 public class ManageMutator {

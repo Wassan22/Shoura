@@ -43,7 +43,6 @@ public class ConsultationAnswer extends AppCompatActivity {
         ConsultationID= (TextView) findViewById(R.id.ConsultationID);
         ConsultationID.setText(ID);
 
-
         ID = getIntent().getExtras().getString("consultationId");
 
         if(ID!= null) {

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by ACM on 2/10/17.
+ * Created by Atheer on 2/10/17.
  */
 
 public class ConsultantProfile extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class ConsultantProfile extends AppCompatActivity {
 
         setTitle(R.string.viewConsultant);
 
-        // to receive the number from previous page
+        // to receive the consultant from previous page
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
 
@@ -57,7 +57,7 @@ public class ConsultantProfile extends AppCompatActivity {
             RequestConsultation.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Transfer to the next interface
+                    //Transfer to the next interface & Send Consultant
                     Intent i = new Intent(ConsultantProfile.this, RequestConsultation.class);
                     i.putExtra("username", username);
                     startActivity(i);
@@ -69,11 +69,10 @@ public class ConsultantProfile extends AppCompatActivity {
             Chat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Transfer to the next interface
-                        /*
-                        Intent i = new Intent(AdviserProfile.this,MainActivity.class);
-                        i.putExtra("username","");
-                        startActivity(i);*/
+                    //Transfer to the next interface & Send Consultant
+                    Intent i = new Intent(ConsultantProfile.this, Chatting.class);
+                    i.putExtra("username","");
+                    startActivity(i);
                 }
             });
 
@@ -82,11 +81,11 @@ public class ConsultantProfile extends AppCompatActivity {
             Consultations.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        /*
-                        //change the next page
-                        Intent i = new Intent(AdviserProfile.this,MainActivity.class);
-                        i.putExtra("username","");
-                        startActivity(i); */
+
+                //change the next page & & Send Consultant
+                Intent i = new Intent(ConsultantProfile.this,PreviousConsultations.class);
+                i.putExtra("username","");
+                startActivity(i);
                 }
             });
         }

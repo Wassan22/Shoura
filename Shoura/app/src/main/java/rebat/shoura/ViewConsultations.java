@@ -33,12 +33,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by wassanalluhaidan on 2/14/17.
+ * Created by Salha Altamimi on 2/14/17.
  */
 
 public class ViewConsultations extends AppCompatActivity {
 
-    String json_string;
+    String json_string, username;
     JSONObject jsonObject;
     JSONArray jsonArray;
     Adapter Adapter;
@@ -52,7 +52,13 @@ public class ViewConsultations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_consultations);
 
-        getJSON();
+        // to receive the consultant from previous page
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
+
+        if(username != null) {
+            getJSON();
+        }
     }
 
     public void getJSON() {
@@ -137,7 +143,7 @@ public class ViewConsultations extends AppCompatActivity {
                 SharedPreferences sharedPref = getSharedPreferences("Consultation", Context.MODE_PRIVATE);
                 String sendID = sharedPref.getString("CID" + position, "");
                 Intent in = new Intent(ViewConsultations.this, ConsultationAnswer.class);
-                in.putExtra("ID", sendID);
+                in.putExtra("consultationId", sendID);
                 startActivity(in);
 
                 // Toast.makeText(ViewConsultations.this,"Item in position " + position + " clicked", Toast.LENGTH_LONG).show();

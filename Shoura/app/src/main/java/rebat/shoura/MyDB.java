@@ -10,7 +10,7 @@ import android.graphics.BitmapFactory;
 import java.io.ByteArrayOutputStream;
 
 /**
- * Created by ACM on 08/02/2017.
+ * Created by Atheer on 08/02/2017.
  */
 
 public class MyDB  extends SQLiteOpenHelper {
