@@ -42,4 +42,5 @@
     <string name="Occupation">المهنة</string>
     <string name="Cancel">إلغاء</string>
     <string name="Save">حفظ</string>
+    <string name="UserProfile">ملف المستخدم</string>
 </resources>

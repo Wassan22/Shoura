@@ -24,7 +24,7 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
 
-
+        // Get layout elements
         USER_NAME =(EditText)findViewById(R.id.editusername);
         USER_EMAIL =(EditText)findViewById(R.id.editemail);
         USER_AGE =(EditText) findViewById(R.id.editage);
@@ -33,9 +33,15 @@ public class UserProfile extends AppCompatActivity {
         USER_JOB =(EditText) findViewById(R.id.editjob);
         REG = (Button)findViewById(R.id.saveButton);
 
+
+        // If data is in db, view data
+
+
+        // If save button clicked
         REG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // get filled data
                 user_name= USER_NAME.getText().toString();
                 user_email= USER_EMAIL.getText().toString();
                 user_age= USER_AGE.getText().toString();
@@ -43,9 +49,11 @@ public class UserProfile extends AppCompatActivity {
                 user_status= USER_STATUS.getText().toString();
                 user_job= USER_JOB.getText().toString();
 
+                // insert into db
                 DatabaseOperations DB = new DatabaseOperations(ctx);
                 DB.InsertInfo(DB, user_name, user_email, user_age, user_gender, user_status, user_job);
 
+                // notify user of success
                 Toast.makeText(getBaseContext(), R.string.DataSavedSuccessfully, Toast.LENGTH_LONG).show();
             }
         });
