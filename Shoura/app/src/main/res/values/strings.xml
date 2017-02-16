@@ -37,4 +37,9 @@
     <string name="Consultation">الاستشارة</string>
     <string name="ViewConsultation">عرض استشارة</string>
     <string name="ViewConsultations">عرض الاستشارات</string>
+    <string name="DataSavedSuccessfully">تم حفظ البيانات بنجاح</string>
+    <string name="MaritalStatus">الحالة الاجتماعية</string>
+    <string name="Occupation">المهنة</string>
+    <string name="Cancel">إلغاء</string>
+    <string name="Save">حفظ</string>
 </resources>

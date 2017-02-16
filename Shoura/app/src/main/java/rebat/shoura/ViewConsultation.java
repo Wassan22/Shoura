@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import org.json.JSONObject;
 
 /**
@@ -19,30 +18,41 @@ public class ViewConsultation extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set Leyout
-        setContentView(R.layout.consultation);
-        setTitle(R.string.ViewConsultation);
+        try {
+            // Set Leyout
+            setContentView(R.layout.consultation);
+            setTitle(R.string.ViewConsultation);
 
-        // Get Consultation Id
-        Intent previous = getIntent();
-        ConsultationId = previous.getIntExtra("ConsultationId",0);
+            // Get Consultation Id
+            Intent previous = getIntent();
+            ConsultationId = previous.getIntExtra("ConsultationId", 0);
 
-        if( ConsultationId != 0) {
-            // Get Layout Elements
-            Consultation = (TextView) findViewById(R.id.Consultation);
-            Answer = (TextView) findViewById(R.id.Answer);
+            if (ConsultationId != 0) {
+                // Get Layout Elements
+                Consultation = (TextView) findViewById(R.id.Consultation);
+                Answer = (TextView) findViewById(R.id.Answer);
 
-            // Get Consultation
-            JSONObject consultation = GetConsultation(ConsultationId);
+                // Get Consultation
+                JSONObject consultation = GetConsultation(ConsultationId);
 
-            // Set Retrieved Values
-            Consultation.setText("");
-            Answer.setText("");
+                // Set Retrieved Values
+                Consultation.setText(consultation.getString("Consultation"));
+                Answer.setText(consultation.getString("Answer"));
+            }
+        }catch (Exception ex){
+            // Log Error
         }
     }
 
     private JSONObject GetConsultation(int consultationId) {
-        // Get Consultation From Web Service or JSONObject
-        return new JSONObject();
+        try{
+            // Get Consultation From Web Service or JSONObject
+            String jsonString = "{\"ConsultationId\":\"1\",\"Consultation\":\"Consultation\",\"Answer\":\"Answer\"}";
+            JSONObject Consultation = new JSONObject(jsonString);
+            return Consultation;
+        }catch (Exception ex){
+            // Log Error
+            return null;
+        }
     }
 }
