@@ -17,6 +17,7 @@ public class Entities {
         String Password = "email";
         byte[] Photo;
     }
+
     public static abstract class User implements BaseColumns
     {
         public static final String USER_NAME = "user_name";
@@ -25,7 +26,9 @@ public class Entities {
         public static final String USER_GENDER = "user_gender";
         public static final String USER_STATUS ="user_status";
         public static final String USER_JOB ="user_job";
+
         public static final String DATABASE_NAME = "user_profile";
+
         public static final String TABLE_NAME = "reg_info";
     }
 }
